@@ -2,11 +2,13 @@ package com.nochita.meliApp.repository
 
 import android.content.ContentResolver
 import com.nochita.meliApp.domain.SearchResult
-import com.nochita.meliApp.domain.SearchResultResponse
 import com.nochita.meliApp.network.MeliInterface
 import com.nochita.meliApp.network.MeliService
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SearchRepositoryImpl : SearchRepository {
+@Singleton
+class SearchRepositoryImpl @Inject constructor(): SearchRepository {
 
     private val client = MeliService.getRetrofit().create(MeliInterface::class.java)
 

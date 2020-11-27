@@ -3,7 +3,9 @@ package com.nochita.meliApp.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nochita.meliApp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ListActivity : AppCompatActivity() {
 
     companion object {

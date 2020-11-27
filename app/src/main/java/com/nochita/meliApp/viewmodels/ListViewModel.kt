@@ -1,10 +1,9 @@
 package com.nochita.meliApp.viewmodels
 
 import android.content.ContentResolver
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.hilt.Assisted
+import androidx.hilt.lifecycle.ViewModelInject
+import androidx.lifecycle.*
 import com.nochita.meliApp.domain.SearchResult
 import com.nochita.meliApp.repository.SearchRepository
 import com.nochita.meliApp.repository.SearchRepositoryImpl
@@ -12,8 +11,9 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ListViewModel (
-    private val searchRepository: SearchRepository = SearchRepositoryImpl(),
+class ListViewModel @ViewModelInject constructor(
+    private val searchRepository: SearchRepository,
+    @Assisted private val savedStateHandle: SavedStateHandle,
     private val coroutineDispatcher: CoroutineDispatcher = Dispatchers.IO
 ): ViewModel() {
 

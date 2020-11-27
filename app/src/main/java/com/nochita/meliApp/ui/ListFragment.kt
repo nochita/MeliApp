@@ -12,11 +12,13 @@ import androidx.lifecycle.Observer
 import com.nochita.meliApp.R
 import com.nochita.meliApp.domain.SearchResult
 import com.nochita.meliApp.viewmodels.ListViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_list.*
 
 /**
  * A fragment representing a list of Items.
  */
+@AndroidEntryPoint
 class ListFragment : Fragment(R.layout.fragment_list), ListAdapter.OnSearchResultClicked {
 
     private val viewModel: ListViewModel by viewModels()
