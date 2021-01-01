@@ -1,6 +1,6 @@
 # MeliApp
 
-Mercado libre mobile challenge
+Mercado libre search app
 
 ![Main screen](/screenshots/main.png?raw=true "Main screen")
 ![List](/screenshots/list.png?raw=true "List")
